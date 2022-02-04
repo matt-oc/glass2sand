@@ -87,9 +87,6 @@ var form = document.getElementById("contact");
 $(document).ready(function() {
   setTimeout(() => {
     $(".loader").fadeOut();
-    $(".content").fadeIn();
-    $(".footer").fadeIn();
-    $(".header").fadeIn();
-  }, 2000);
+  }, 500);
 
 });
