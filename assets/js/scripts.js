@@ -82,3 +82,14 @@ var form = document.getElementById("contact");
   $(function () {
     $('[data-toggle="popover"]').popover()
   })
+
+  // loader removal
+$(document).ready(function() {
+  setTimeout(() => {
+    $(".loader").fadeOut();
+    $(".content").fadeIn();
+    $(".footer").fadeIn();
+    $(".header").fadeIn();
+  }, 2000);
+
+});
