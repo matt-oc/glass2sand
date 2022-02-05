@@ -7,19 +7,19 @@ html {
 
 body {
   color: #777777;
-  font-family: 'Roboto', monospace;
+  font-family: 'Roboto', sans-serif;
   max-width: 100%;
   position: absolute;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   text-align: center;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: #fff;
-  margin: 5%;
+  margin: 3%;
 }
 
 h2 {
@@ -38,6 +38,10 @@ p {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 
@@ -135,7 +139,7 @@ p {
 .recycle-logo {
   margin-left: -10px;
   border-radius: 30px;
-  animation: rotation 4s infinite linear;
+  animation: rotation 8s infinite linear;
 }
 
 /* General Structure */
@@ -151,21 +155,22 @@ p {
 
 .contact-header {
   z-index: 1001;
-  background: linear-gradient(90deg, rgba(40,54,118,0) 0%, rgba(0,0,0,0.31416316526610644) 76%, rgba(0,0,0,1) 100%);
-  padding: 15px;
+background-color: #292928;
+ padding: 15px;
   height: 50px;
 }
 
 .contact-header-el {
+  font-family: 'Roboto Slab', sans-serif;
   padding: 0 80px 0 80px;
-  color: #d9cb30;
-  text-decoration: underline;
+  color:  #cccccc;
   font-weight: bolder;
+  font-size: 1em;
 }
 
 .contact-header-el i {
   margin-right: 10px;
-  color: #d9cb30;
+  color: #cccccc;
 }
 
 .jumbotron {
@@ -185,13 +190,13 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.85);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 5;
 }
 
 .jumbotron-contents {
   z-index: 1000;
-  margin-top: 100px;
+  margin-top: 50px;
   position: relative;
 }
 
@@ -199,6 +204,16 @@ p {
   background-color: transparent;
   background-color: rgba(255, 255, 255, .10);
   backdrop-filter: blur(5px);
+  padding-top: 1.25rem;
+  transition: backdrop-filter .25s, background-color .5s;
+  box-sizing: border-box;
+}
+
+.card:hover {
+  backdrop-filter: blur(40px);
+  background-color: rgba(255, 255, 255, .13);
+  border: 1px solid #ED1B25;
+
 }
 
 .card-image {
@@ -243,14 +258,16 @@ p {
 .contact-btn {
   font-size: 1.1rem;
   color: #ffffff;
-  background-color: #51ABD1;
+  background-color: transparent;
   padding: 17px 40px 17px 40px;
-}
+  border: 1px solid #ffffff;
+  transition: border .5s, background-color .5s}
 
 /* Inset box shadow idea from https://stackoverflow.com/questions/8452739/css-inset-borders */
 .contact-btn:hover {
   color: #ffffff;
-  box-shadow: inset 0 0 10px #ffffff;
+  border: 1px solid #ED1B25;
+  background-color: #ED1B25;
 }
 
 /* Code for overlay adapted from :https://stackoverflow.com/questions/61297397/position-absolute-top0-bottom-0-right0-left0-and-parent-paddings */
