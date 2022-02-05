@@ -130,6 +130,12 @@ p {
   color: #777777 !important;
 }
 
+.recycle-logo {
+  margin-left: -10px;
+  border-radius: 30px;
+  animation: rotation 4s infinite linear;
+}
+
 /* General Structure */
 .container-fluid {
   padding: 0;
@@ -143,7 +149,7 @@ p {
 
 .contact-header {
   z-index: 1001;
-  background-color: #000000;
+  background: linear-gradient(90deg, rgba(40,54,118,0) 0%, rgba(0,0,0,0.31416316526610644) 76%, rgba(0,0,0,1) 100%);
   padding: 15px;
   height: 50px;
 }
@@ -157,7 +163,7 @@ p {
 
 .contact-header-el i {
   margin-right: 10px;
-  color: #ff4d4d;
+  color: #adaca8;
 }
 
 .row {
@@ -423,6 +429,29 @@ p {
 
 .footer-credits:hover {
   opacity: 1;
+}
+
+/* Keyframes for animation */
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes float {
+	0% {
+		transform:rotate(0deg) translatey(0px);
+	}
+	50% {
+		transform: rotate(5deg) translatey(-10px);
+	}
+	100% {
+		transform: rotate(0deg) translatey(0px);
+	}
 }
 
 /* Animation of drone adapted from https://www.w3schools.com/css/css3_animations.asp */
