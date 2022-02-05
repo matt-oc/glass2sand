@@ -17,7 +17,9 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 2rem;
+  color: #fff;
+  margin: 5%;
 }
 
 h2 {
@@ -156,14 +158,52 @@ p {
 
 .contact-header-el {
   padding: 0 80px 0 80px;
-  color: #adaca8;
+  color: #d9cb30;
   text-decoration: underline;
   font-weight: bolder;
 }
 
 .contact-header-el i {
   margin-right: 10px;
-  color: #adaca8;
+  color: #d9cb30;
+}
+
+.jumbotron {
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  background-image: url("./images/jumbotron.jpeg");
+  background-size: cover;
+  position: relative;
+}
+
+.jumbotron:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 5;
+}
+
+.jumbotron-contents {
+  z-index: 1000;
+  margin-top: 100px;
+  position: relative;
+}
+
+.card {
+  background-color: transparent;
+  background-color: rgba(255, 255, 255, .10);
+  backdrop-filter: blur(5px);
+}
+
+.card-image {
+  height: 310px;
+  align-self: center;
 }
 
 .row {
