@@ -87,6 +87,10 @@ var form = document.getElementById("contact");
 $(document).ready(function() {
   setTimeout(() => {
     $(".loader").fadeOut();
+    $('#cookieConsent').cookieConsent({
+          message: 'This website uses cookies. By using this website you consent to our use of these cookies.',
+          consentTime: 365
+        });
   }, 500);
 
 });

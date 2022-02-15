@@ -9,7 +9,9 @@ body {
   color: #777777;
   font-family: 'Roboto', sans-serif;
   max-width: 100%;
+  min-width: 100%;
   position: absolute;
+  padding-right: 0 !important;
 }
 
 h1, h2, h3, h4 {
@@ -190,7 +192,7 @@ background-color: #292928;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.84);
   z-index: 5;
 }
 
@@ -205,7 +207,7 @@ background-color: #292928;
   background-color: rgba(255, 255, 255, .10);
   backdrop-filter: blur(5px);
   padding-top: 1.25rem;
-  transition: backdrop-filter .25s, background-color .5s;
+  transition: backdrop-filter .10s, background-color .5s;
   box-sizing: border-box;
 }
 
@@ -270,6 +272,23 @@ background-color: #292928;
   background-color: #ED1B25;
 }
 
+.contact {
+  width: 80%;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px;
+}
+
+.contact label {
+  margin-top: 1%;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 /* Code for overlay adapted from :https://stackoverflow.com/questions/61297397/position-absolute-top0-bottom-0-right0-left0-and-parent-paddings */
 .carousel-item:before {
   position: absolute;
@@ -320,6 +339,32 @@ background-color: #292928;
   justify-content: center;
   margin: auto;
   width: 80%;
+}
+
+/* Cookie popup */
+#cookieConsent {
+  background-color: white;
+  padding: .9em;
+  text-align: center;
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  bottom: 0px;
+  width: 100%;
+  font-size: 14px;
+  max-width: 100vw;
+}
+#cookieConsent button.cookieAccept {
+  background: #ED1B25;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.2em;
+  margin: 0.5em;
+  padding: 0.5em 0.5em 0.5em 0.6em;
+}
+
+#cookieConsent button.cookieAccept:focus {
+  outline: 0;
 }
 
 /* What we do section */
@@ -404,11 +449,12 @@ background-color: #292928;
 .contact {
   border-radius: 4px;
   padding: 30px 16px 30px 16px;
-  width: 50%;
+  width: 90%;
   background-color: #51ABD1;
   color: #ffffff;
   display: grid;
   align-items: center;
+  min-width: 400px;
 }
 
 .contact-us p {
@@ -450,8 +496,6 @@ background-color: #292928;
   background-color: #51ABD1;
   padding: 17px 40px 17px 40px;
   border: 1px solid #777777;
-  margin-top: 10px;
-  margin-bottom: -17px;
 }
 
 /* Inset box shadow idea from https://stackoverflow.com/questions/8452739/css-inset-borders */
@@ -511,52 +555,9 @@ background-color: #292928;
 	}
 }
 
-/* Animation of drone adapted from https://www.w3schools.com/css/css3_animations.asp */
-#flying-drone, #flying-drone2, #flying-drone3, #flying-drone4 {
-  position: relative;
-  z-index: 5;
-  display: block;
-  top: 100px;
-  animation-timing-function: cubic-bezier(0.1, 0.7, 0.5, 0.1);
-  animation: drone 20s infinite;
-}
-
-@keyframes drone {
-  0% {
-    left: -50px;
-    top: 100px;
-  }
-
-  25% {
-    left: 200px;
-    top: 100px;
-  }
-
-  50% {
-    left: 400px;
-    top: 200px;
-  }
-
-  75% {
-    left: 800px;
-    top: 500px;
-  }
-
-  100% {
-    left: 0px;
-    top: 0px;
-  }
-}
-
 /* Media queries */
 @media(max-width:1244px) {
-  .contact {
-    width: 80%;
-  }
 
-  .contact-us p {
-    margin-left: 10%;
-  }
 
   .carousel-caption {
     bottom:15%;
@@ -592,37 +593,11 @@ background-color: #292928;
 }
 
 @media(max-width:768px) {
-  .contact-us p {
-    margin-left: 0%;
-  }
 
-  .contact {
-    margin-bottom: 10%;
-  }
-
-  .about p {
-    max-width: 80%
-  }
 }
 
 @media(max-width:570px) {
-  .contact-us p {
-    margin-left: 0%;
-  }
-  .contact {
-    width: 95%;
-  }
 
-  .about p {
-    max-width: 95%
-  }
-
-  .navbar img {
-    height: 23px;
-  }
-  .dl-btn-area {
-    flex-flow: column;
-  }
 }
 
 @media(min-width:2249px) {
