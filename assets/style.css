@@ -46,11 +46,18 @@ p {
   margin-right: auto;
 }
 
-a:hover {
-  text-decoration: none;
+a {
+  color: #ED1B25;
 }
 
+a:hover {
+  text-decoration: none;
+  color: #b32400;
+}
 
+.red {
+  color: #ED1B25;
+}
 .loader {
   background-color: #ffffff;
   display: flex;
@@ -273,7 +280,6 @@ background-color: #292928;
   border: 1px solid #ffffff;
   transition: border .5s, background-color .5s}
 
-/* Inset box shadow idea from https://stackoverflow.com/questions/8452739/css-inset-borders */
 .contact-btn:hover {
   color: #ffffff;
   border: 1px solid #ED1B25;
@@ -457,7 +463,7 @@ body.modal-open {
   border-radius: 4px;
   padding: 30px 16px 30px 16px;
   width: 90%;
-  background-color: #51ABD1;
+  background-color: #292928;
   color: #ffffff;
   display: grid;
   align-items: center;
@@ -470,8 +476,12 @@ body.modal-open {
 }
 
 .contact label {
-  margin-top: 20px;
+  margin-top: 15px;
   margin-bottom: 3px;
+}
+
+.contact p {
+  margin-bottom: 0;
 }
 
 .contact input[type='text'], .contact input[type='email'], .contact input[type='number'] {
@@ -485,7 +495,7 @@ body.modal-open {
 }
 
 .contact textarea {
-  padding: 30px 10px 30px 10px;
+  padding: 20px 10px 20px 10px;
   width: 100%;
   border: none;
 }
@@ -500,21 +510,33 @@ body.modal-open {
 .contact-btn-submit {
   font-size: 1.1rem;
   color: #ffffff;
-  background-color: #51ABD1;
+  border: 1px solid #ED1B25;
+  background-color: #ED1B25;
   padding: 17px 40px 17px 40px;
-  border: 1px solid #777777;
-}
+  transition: border .5s, background-color .5s}
 
-/* Inset box shadow idea from https://stackoverflow.com/questions/8452739/css-inset-borders */
-.contact-btn-submit:hover {
+  /* Inset box shadow idea from https://stackoverflow.com/questions/8452739/css-inset-borders */
+  .contact-btn-submit:hover {
   color: #ffffff;
-  box-shadow: inset 0 0 10px #ffffff;
-  border: 1px solid #51ABD1;
-}
+  border: 1px solid #b32400;
+  background-color: #b32400;
+  }
 
 .contact fieldset {
   margin: 10px;
   justify-content: center;
+}
+
+.modal-header {
+  background-color: #292928;
+}
+
+.modal-header .close {
+  color: #ffffff;
+}
+
+.help-block {
+  font-size: .8rem;
 }
 
 /* Footer */
@@ -581,6 +603,11 @@ body.modal-open {
 
 .footer h4 {
   margin-bottom: 20px;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: .5;
 }
 /* Keyframes for animation */
 

@@ -50,14 +50,6 @@ var form = document.getElementById("contact");
       alert( "Oops! There was a problem.");
     }
 
-    // handle the form submission event from formspree.io
-
-    form.addEventListener("submit", function(ev) {
-      ev.preventDefault(); // stop the standard form POST submit so we can stay on our page and display a response to the user.
-      var data = new FormData(form);
-      ajax(form.method, form.action, data, success, error);
-    });
-
 
   // helper function for sending an AJAX request from formspree.io
 
@@ -94,4 +86,61 @@ $(document).ready(function() {
         });
   }, 1000);
 
+});
+
+// handle the form submission event from formspree.io
+// Ajax for form
+$(document).ready(function () {
+  var options = {
+    success: showResponse,  // post-submit callback
+    clearForm: true
+  };
+
+
+  $('#contact').ajaxForm(options);
+});
+
+function showResponse(responseText, statusText, xhr, $form) {
+  alert('Status: ' + statusText + '\n' + responseText
+  );
+};
+
+// Message length check
+$(document).ready(function () {
+  var val = 0;
+  $('#characterLeft').text('500 characters left');
+  $('#message').keydown(function () {
+    var max = 500;
+    var len = $(this).val().length;
+    if (len >= max) {
+      $('#characterLeft').text('You have reached the limit');
+      $('#characterLeft').addClass('red');
+      $('#contact-submit').addClass('disabled');
+    }
+    else if (event.which == 8 && len == 0) {
+      $('#characterLeft').text(max + ' characters left');
+      $('#contact-submit').removeClass('disabled');
+      $('#characterLeft').removeClass('red');
+    }
+    else if (event.which == 8 && val <= 500) {
+      var ch = val + 1;
+      val = val + 1;
+      $('#characterLeft').text(ch + ' characters left');
+      $('#contact-submit').removeClass('disabled');
+      $('#characterLeft').removeClass('red');
+    }
+    else if (len == 0) {
+      var ch = max - 1;
+      val = max - 1;
+      $('#characterLeft').text(ch + ' characters left');
+      $('#contact-submit').removeClass('disabled');
+      $('#characterLeft').removeClass('red');
+    }
+    else {
+      val = val - 1;
+      $('#characterLeft').text(val + ' characters left');
+      $('#contact-submit').removeClass('disabled');
+      $('#characterLeft').removeClass('red');
+    }
+  });
 });
