@@ -4,7 +4,7 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById('gmap_canvas'),{
     zoom: 6,
     scrollwheel: false,
-    center: {lat:55.161583,lng: -5.154476},
+    center: {lat:52.16097522977505,lng: -7.155605540135664},
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     mapTypeControl: false,
     streetViewControl: false,
@@ -20,13 +20,13 @@ function initMap() {
           }
         ]
       }]
-
   });
 
   // marker
   g2s = new google.maps.Marker({
-    map: map, position: new google.maps.LatLng(52.161583, -7.154476)
+    map: map, position: new google.maps.LatLng(52.16097522977505, -7.155605540135664)
   });
+
   infoG2s = new google.maps.InfoWindow({
     pixelOffset: new google.maps.Size(0, 0),
     content: '<p style="margin-bottom: 0px; display:flex; background-color:#000000; padding-top: 10px; padding-bottom: 10px; width:100%;"><img src="assets/images/main-logo-transparent.png" width="100" style="margin-left:auto; margin-right:auto;"; /></p>'
@@ -105,8 +105,13 @@ function showResponse(responseText, statusText, xhr, $form) {
   );
 };
 
+
+
 // Message length check
 $(document).ready(function () {
+  [].forEach.call(document.getElementsByClassName("iframe-lightbox-link"), function (el) {
+    el.lightbox = new IframeLightbox(el);
+  });
   var val = 0;
   $('#characterLeft').text('500 characters left');
   $('#message').keydown(function () {
