@@ -493,12 +493,14 @@ body.modal-open {
 
 .contact p {
   margin-bottom: 0;
+  font-size: 1rem;
 }
 
-.contact input[type='text'], .contact input[type='email'], .contact input[type='number'] {
+.contact input[type='text'], .contact input[type='email'], .contact input[type='number'], .contact input[type='tel'] {
   padding: 10px 10px 10px 10px;
   width: 100%;
   border: none;
+  margin-top: 25px;
 }
 
 .contact-us {
@@ -506,7 +508,7 @@ body.modal-open {
 }
 
 .contact textarea {
-  padding: 20px 10px 20px 10px;
+  padding: 10px 10px 10px 10px;
   width: 100%;
   border: none;
 }
@@ -548,6 +550,12 @@ body.modal-open {
 
 .help-block {
   font-size: .8rem;
+  display: grid;
+  justify-content: center;
+}
+
+#characterLeft {
+  margin-bottom: 10px;
 }
 
 /* Footer */

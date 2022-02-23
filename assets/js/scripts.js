@@ -29,7 +29,7 @@ function initMap() {
   });
   infoG2s = new google.maps.InfoWindow({
     pixelOffset: new google.maps.Size(0, 0),
-    content: '<p style="margin-bottom: 0px; display:flex; background-color:#000000; padding-top: 10px; padding-bottom: 10px; width:100%; border-radius: 10px;"><img src="assets/images/main-logo-transparent.png" width="100" style="margin-left:auto; margin-right:auto;"; /></p>'
+    content: '<p style="margin-bottom: 0px; display:flex; background-color:#000000; padding-top: 10px; padding-bottom: 10px; width:100%;"><img src="assets/images/main-logo-transparent.png" width="100" style="margin-left:auto; margin-right:auto;"; /></p>'
   });
 
   infoG2s.open(map, g2s);
@@ -169,4 +169,9 @@ function copyEmail() {
   setTimeout(function () {
     document.getElementById("tooltip-em").setAttribute("tooltip", "Copy to Clipboard")
   }, 2000);
+}
+
+function recaptcha() {
+let submitBtn = document.getElementById("contact-submit")
+submitBtn.removeAttribute('disabled')
 }
