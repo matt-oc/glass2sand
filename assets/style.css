@@ -60,9 +60,14 @@ a:hover {
   color: #b32400;
 }
 
+i {
+  vertical-align: middle;
+}
+
 .red {
   color: #ED1B25;
 }
+
 .loader {
   background-color: #ffffff;
   display: flex;
@@ -74,25 +79,12 @@ a:hover {
   height: 20%;
 }
 
-.blue-bg {
-  background-color: #548CE2;
-}
-
-.dblue-bg {
-  background-color: #52abd1;
-}
-
 .white-content {
   color: #ffffff;
 }
 
 .url {
   color: #1D91FC;
-}
-
-.card-body {
-  color: #777777;
-  ;
 }
 
 .recycle-logo {
@@ -102,6 +94,11 @@ a:hover {
 
 .unused-recycle-logo:hover {
   animation: rotation 8s infinite linear;
+}
+
+.z-1002 {
+  z-index: 1002;
+  position: absolute;
 }
 
 /* General Structure */
@@ -170,6 +167,7 @@ background-color: #292928;
   transition: backdrop-filter .10s, background-color .5s, -webkit-backdrop-filter, .10s;
   box-sizing: border-box;
   margin: 15px;
+  color: #777777;
 }
 
 .card:hover {
@@ -177,7 +175,7 @@ background-color: #292928;
   -webkit-backdrop-filter: blur(40px);
   background-color: rgba(255, 255, 255, .13);
   border: 1px solid #ED1B25;
-
+  color: #ffffff;
 }
 
 .card-image {
@@ -189,8 +187,12 @@ background-color: #292928;
   width: 100%;
 }
 
-.row {
-  margin: 0;
+.nav a {
+  color: #bfbfbf;
+}
+
+.nav a:hover {
+  color: #b32400;
 }
 
 .contact-btn-area {
@@ -200,20 +202,11 @@ background-color: #292928;
   display: flex;
 }
 
-.dl-btn-area {
-  width: 100%;
-  display: block;
-  justify-content: center;
-  display: flex;
-}
-
-
-#about, #services, #faq, #media, #contact-us {
+#crusher, #digester, #compactor {
   position: absolute;
   transform: translateY(-14vh);
 }
 
-/* Main banner carousel */
 .landing-screen {
   margin-top: -80px;
 }
@@ -253,8 +246,46 @@ body.modal-open {
   overflow: hidden;
 }
 
-/* Code for overlay adapted from :https://stackoverflow.com/questions/61297397/position-absolute-top0-bottom-0-right0-left0-and-parent-paddings */
-.carousel-item:before {
+
+.youtube {
+  width: 80%;
+  height: 300px;
+}
+
+/* Product Section */
+.product-section {
+  height: 500px;
+  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+ padding: 20px;
+ display: flex;
+ justify-content: center;
+ background-color: #ffffff;
+}
+
+.product-section img {
+  height: 80%;
+}
+
+.product-img-background-crusher {
+  background-image: url("./images/broken-glass.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.product-img-background-compactor {
+  background-image: url("./images/compactor.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.product-img-background-bio {
+  background-image: url("./images/digester.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.product-img-background-crusher:before, .product-img-background-compactor:before, .product-img-background-bio:before {
   position: absolute;
   content: "";
   display: block;
@@ -262,53 +293,36 @@ body.modal-open {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.85);
-  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 5;
 }
 
-.carousel-inner {
-  height: 100vh;
-  min-height: 800px;
+.product-container {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
-.carousel-title {
-  top: 25%;
+.products {
+  background-image: url("./images/white_carbon.png");
+  background-size: cover;
 }
 
-.carousel-caption {
-  bottom: 28%;
+.product-wrapper {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.landing-quote {
-  font-size: 1.3rem;
+.logo-left {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 7%!important;
 }
 
-/* About section */
-
-.about {
-  width: 70%;
-  max-width: 1500px;
-}
-.circle-image {
-  border-radius: 800px;
-  box-shadow: 5px 5px 50px #727a74;
-}
-
-.about .col-lg-6, .about .col-12 {
-  justify-content: center;
-  align-items: center;
-}
-
-.about-clamp {
-  max-width: 1500px;
-  justify-content: center;
-  margin: auto;
-  width: 80%;
-}
-
-.youtube {
-  width: 80%;
-  height: 300px;
+.logo-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 10%!important;
 }
 
 /* Cookie popup */
@@ -409,76 +423,11 @@ body.modal-open {
   opacity: 1;
 }
 
-/* What we do section */
-.services .row {
-  justify-content: center;
-}
-
-.services p {
-  width: 70%;
-  max-width: 1500px;
-}
-
-.services-offered {
-  font-size: 1.2rem;
-}
-
-/* Faq Section */
-.faq .row {
-  justify-content: center;
-}
-
-.btn-block {
-  color: #777777;
-  font-size: 1.1rem;
-  font-weight: 800;
-}
-
-.faq .fa-angle-down {
-  font-size: 1.3rem;
-  margin-right: 10px;
-}
-
-.card .btn:hover {
-  color: #548DE2;
-}
-
-/* Media Section */
-.media-image {
-  width: 80%;
-  margin: auto;
-}
-
-.dl-btn {
-  font-size: 1.1rem;
-  color: #ffffff;
-  background-color: #51ABD1;
-  padding: 17px 40px 17px 40px;
-  margin: 30px;
-}
-
-.modal-dialog {
-  width: fit-content;
-}
-
-.lightbox-content {
-  display: none;
-}
-
-.media img {
-  max-height: 245px;
-}
 
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 100%;
   }
-}
-
-/* Inset box shadow idea from https://stackoverflow.com/questions/8452739/css-inset-borders */
-.dl-btn:hover {
-  color: #ffffff;
-  box-shadow: inset 0 0 10px #ffffff;
 }
 
 /* Contact us section */
@@ -545,7 +494,6 @@ body.modal-open {
   padding: 17px 40px 17px 40px;
   transition: border .5s, background-color .5s}
 
-  /* Inset box shadow idea from https://stackoverflow.com/questions/8452739/css-inset-borders */
   .contact-btn-submit:hover {
   color: #ffffff;
   border: 1px solid #b32400;
@@ -621,12 +569,10 @@ body.modal-open {
   color: #ffffff;
 }
 
-
 .footer-credits a {
   color: #fff;
   opacity: .7;
   font-size: .8rem;
-
 }
 
 .footer-credits a:hover {
