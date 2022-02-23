@@ -144,3 +144,29 @@ $(document).ready(function () {
     }
   });
 });
+
+function copyNumber() {
+  var dummy = document.createElement("textarea");
+  document.body.appendChild(dummy);
+  dummy.value = '+353878578806';
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+  document.getElementById("tooltip-no").setAttribute("tooltip", "Copied");
+  setTimeout(function () {
+    document.getElementById("tooltip-no").setAttribute("tooltip", "Copy to Clipboard")
+  }, 2000);
+}
+
+function copyEmail() {
+  var dummy = document.createElement("textarea");
+  document.body.appendChild(dummy);
+  dummy.value = 'info@glass2sand.com';
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+  document.getElementById("tooltip-em").setAttribute("tooltip", "Copied");
+  setTimeout(function () {
+    document.getElementById("tooltip-em").setAttribute("tooltip", "Copy to Clipboard")
+  }, 2000);
+}
