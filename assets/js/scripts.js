@@ -2,10 +2,13 @@
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById('gmap_canvas'),{
-    zoom: 7,
+    zoom: 6,
     scrollwheel: false,
-    center: new google.maps.LatLng(52.161583, -7.154476),
+    center: {lat:55.161583,lng: -5.154476},
     mapTypeId: google.maps.MapTypeId.ROADMAP,
+    mapTypeControl: false,
+    streetViewControl: false,
+    fullscreenControl: false,
     styles: [
       {
         featureType: 'landscape.natural',
@@ -21,22 +24,16 @@ function initMap() {
   });
 
   // marker
-  const drone = new google.maps.Marker({
-    map: map,
-    position: new google.maps.LatLng(52.161583, -7.154476),
-    icon: './assets/favicon/favicon-32x32.png' // custom
+  g2s = new google.maps.Marker({
+    map: map, position: new google.maps.LatLng(52.161583, -7.154476)
+  });
+  infoG2s = new google.maps.InfoWindow({
+    pixelOffset: new google.maps.Size(0, 0),
+    content: '<p style="margin-bottom: 0px; display:flex; background-color:#000000; padding-top: 10px; padding-bottom: 10px; width:100%; border-radius: 10px;"><img src="assets/images/main-logo-transparent.png" width="100" style="margin-left:auto; margin-right:auto;"; /></p>'
   });
 
-  // circle
-  const cityCircle = new google.maps.Circle({
-      strokeColor: "#51ABD1",
-      strokeOpacity: 0,
-      fillColor: "#51ABD1",
-      fillOpacity: 0.35,
-      map,
-      center: {lat: 52.161583, lng: -7.154476},
-      radius: 104000,
-    });
+  infoG2s.open(map, g2s);
+  google.maps.event.addDomListener(window, 'load', initMap);
 }
 
 
@@ -85,12 +82,16 @@ var form = document.getElementById("contact");
 
   // loader removal
 $(document).ready(function() {
+  $(this).scrollTop(0);
   setTimeout(() => {
     $(".loader").fadeOut();
+    $(".content").fadeIn();
+    $(".footer").fadeIn();
+    $("h4").fadeIn(2000);
     $('#cookieConsent').cookieConsent({
           message: 'This website uses cookies. By using this website you consent to our use of these cookies.',
           consentTime: 365
         });
-  }, 500);
+  }, 1000);
 
 });
