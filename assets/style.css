@@ -789,6 +789,10 @@ body.modal-open {
     .card:hover::after {
       display: none;
     }
+
+    #main-logo {
+      height: 73px;
+    }
   }
 
   @media(min-width:768px) {
@@ -833,9 +837,5 @@ body.modal-open {
 
     .logo-right {
         height: 10% !important;
-    }
-
-    #main-logo {
-      height: 75px;
     }
   }
