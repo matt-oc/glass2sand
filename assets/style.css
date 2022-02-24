@@ -98,7 +98,7 @@ i {
 
 .z-1002 {
   z-index: 1002;
-  position: absolute;
+  position: relative;
 }
 
 /* General Structure */
@@ -126,9 +126,9 @@ background-color: #292928;
 .contact-header-el {
   font-family: 'Roboto Slab', sans-serif;
   padding: 0 80px 0 80px;
-  color:  #cccccc;
+  color: #bfbfbf;
   font-weight: 300;
-  font-size: 1em;
+  font-size: .95rem;
 }
 
 .jumbotron {
@@ -138,6 +138,7 @@ background-color: #292928;
   background-image: url("./images/jumbotron.jpeg");
   background-size: cover;
   position: relative;
+  color: #bfbfbf;
 }
 
 .jumbotron:before {
@@ -215,7 +216,7 @@ background-color: #292928;
   z-index: 50;
 }
 
-.contact-btn {
+.contact-btn, .btn {
   font-size: 1.1rem;
   color: #ffffff;
   background-color: transparent;
@@ -223,10 +224,35 @@ background-color: #292928;
   border: 1px solid #ffffff;
   transition: border .5s, background-color .5s}
 
-.contact-btn:hover {
+.contact-btn:hover, .btn:hover {
   color: #ffffff;
   border: 1px solid #ED1B25;
   background-color: #ED1B25;
+}
+
+.product-btns .btn {
+  font-size: .8rem;
+  color: #ffffff;
+  background-color: transparent;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid #ffffff;
+  transition: border .5s, background-color .5s}
+
+.btn:hover {
+  color: #ffffff;
+  border: 1px solid #ED1B25;
+  background-color: #ED1B25;
+}
+
+.product-btns .youtube-btn {
+  color: #ffffff;
+  border: 1px solid #ED1B25;
+  background-color: #ED1B25;
+  transition: background-color .5s
+}
+
+.youtube-btn:hover {
+  background-color: transparent;
 }
 
 .contact {
@@ -323,6 +349,13 @@ body.modal-open {
   top: 20px;
   right: 20px;
   height: 10%!important;
+}
+
+.product-btns {
+  position: absolute;
+    bottom: -40px;
+    left: 70px;
+    width: max-content;
 }
 
 /* Cookie popup */

@@ -24,16 +24,13 @@ function initMap() {
 
   // marker
   g2s = new google.maps.Marker({
-    map: map, position: new google.maps.LatLng(52.16097522977505, -7.155605540135664)
+    map: map,
+    position: new google.maps.LatLng(52.16097522977505, -7.155605540135664),
+    icon: {url:'assets/images/map-icon.png', scaledSize: new google.maps.Size(100, 50)},
+    zIndex: 1
   });
 
-  infoG2s = new google.maps.InfoWindow({
-    pixelOffset: new google.maps.Size(0, 0),
-    content: '<p style="margin-bottom: 0px; display:flex; background-color:#000000; padding-top: 10px; padding-bottom: 10px; width:100%;"><img src="assets/images/main-logo-transparent.png" width="100" style="margin-left:auto; margin-right:auto;"; /></p>'
-  });
 
-  infoG2s.open(map, g2s);
-  google.maps.event.addDomListener(window, 'load', initMap);
 }
 
 
