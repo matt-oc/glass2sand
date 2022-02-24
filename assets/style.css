@@ -277,7 +277,7 @@ body.modal-open {
 
 /* Product Section */
 .product-section {
-  height: 500px;
+  height: auto;
   color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
  padding: 20px;
@@ -287,7 +287,7 @@ body.modal-open {
 }
 
 .product-section img {
-  height: 80%;
+  height: 25rem;
 }
 
 .product-img-background-crusher {
@@ -316,7 +316,7 @@ body.modal-open {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 5;
 }
 
@@ -353,9 +353,25 @@ body.modal-open {
 }
 
 .product-btns {
-  position: absolute;
+  position: relative;
     bottom: -40px;
     width: 100%;
+}
+
+.product-copy {
+  width: 80%;
+  line-height: normal;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.product-section h3 {
+  font-weight: 500;
+}
+
+.product-hr {
+  width: 50%;
+  background-color: #ffffff;
 }
 
 /* Cookie popup */
