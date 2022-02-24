@@ -64,7 +64,7 @@
     <!-- Jumbotron -->
 
     <div class="content">
-      <div class="container-fluid d-lg-block d-none landing-screen">
+      <div class="container-fluid landing-screen">
         <div class="jumbotron">
           <div class="jumbotron-contents">
             <div class="row">
@@ -77,7 +77,7 @@
             </div>
             <div class="row">
               <div class="col-md-4 mb-3">
-                <a href="">
+                <a href="#crusher">
                   <div class="card">
                     <img class="card-image" alt="crusher" src="assets/images/crusher.png">
                     <div class="card-body">
@@ -87,7 +87,7 @@
                 </a>
               </div>
               <div class="col-md-4 mb-3">
-                <a href="">
+                <a href="#compactor">
                   <div class="card">
                     <img class="card-image" alt="friul" src="assets/images/friul.png">
                     <div class="card-body">
@@ -97,7 +97,7 @@
                 </a>
               </div>
               <div class="col-md-4 mb-3">
-                <a href="">
+                <a href="#digester">
                   <div class="card">
                     <img class="card-image" alt="incontinence" src="assets/images/bio.png">
                     <div class="card-body">
@@ -133,11 +133,11 @@
             <section>
               <span id="crusher"></span>
               <div class="row justify-content-center mb-5">
-                <div class="col-3 product-section d-flex align-items-center">
+                <div class="col-xl-3 col-lg-3 col-3 mr-2 product-section d-flex align-items-center">
                   <img src="assets/images/crusher.png" alt="crusher">
                   <img src="assets/images/expleco.jpg" alt="expleco" class="logo-left">
                 </div>
-                <div class="col-5 product-section product-img-background-crusher">
+                <div class="col-xl-5 col-lg-7 col-7 mr-2 product-section product-img-background-crusher">
                   <div class="z-1002">
                     <h3>Glass Bottle Crusher</h3>
                     <hr class="product-hr">
@@ -180,7 +180,7 @@
             <section>
               <span id="compactor"></span>
               <div class="row justify-content-center mb-5">
-                <div class="col-5 product-section product-img-background-compactor">
+                <div class="col-xl-5 col-lg-7 col-7 mr-2 product-section product-img-background-compactor">
                   <div class="z-1002">
                     <h3>Hygiene FC Compactor</h3>
                     <hr class="product-hr">
@@ -215,7 +215,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-3 product-section d-flex align-items-center">
+                <div class="col-xl-3 col-lg-3 col-3 mr-2 product-section d-flex align-items-center">
                   <img src="assets/images/friul.png" alt="compactor">
                   <img src="assets/images/fruilmed.jpg" alt="fruilmed" class="logo-right">
                 </div>
@@ -226,11 +226,11 @@
             <section>
               <span id="digester"></span>
               <div class="row justify-content-center mb-5">
-                <div class="col-3 product-section d-flex align-items-center">
+                <div class="col-xl-3 col-lg-3 col-3 mr-2 product-section d-flex align-items-center">
                   <img src="assets/images/bio.png" alt="bio">
                   <img src="assets/images/logic.jpg" alt="logic" class="logo-left" id="logic">
                 </div>
-                <div class="col-5 product-section product-img-background-bio">
+                <div class="col-xl-5 col-lg-7 col-7 mr-2 product-section product-img-background-bio">
                   <div class="z-1002">
                     <h3>Bio Digester</h3>
                     <hr class="product-hr">
@@ -276,8 +276,8 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="row footer-main">
-        <div class="col-sm justify-content-center footer-col">
+      <div class="row footer-main d-flex justify-content-center">
+        <div class="col-lg-3 col-12 justify-content-center footer-col">
           <h4>Our Details</h4>
           <hr>
           <div class="col-sm d-flex justify-content-center">
@@ -293,8 +293,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-sm justify-content-center">
-          <h4>Products</h4>
+        <div class="col-lg-3 col-12 justify-content-center">
+          <h4>Our Products</h4>
           <hr>
           <div class="footer-col col-sm d-flex justify-content-center">
             <ul>
@@ -306,8 +306,8 @@
             </ul>
           </div>
         </div>
-        <div class="col-sm justify-content-center footer-col">
-          <h4>Location</h4>
+        <div class="col-lg-3 col-12 justify-content-center footer-col">
+          <h4>Our Location</h4>
           <hr>
           <div class="col-sm d-flex justify-content-center">
             <div class="map" id='gmap_canvas'></div>
@@ -332,12 +332,13 @@
   <script src="https://cdn.jsdelivr.net/gh/englishextra/iframe-lightbox@latest/js/iframe-lightbox.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="assets/js/jquery.cookie-consent.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-JCXtsC1T-lRJWwHkD-LNFqMVX1GdhL4&callback=initMap" async defer></script>
+
 
   <!-- Cookie notice -->
 
   <div id="cookieConsent"> <img src="assets/images/cookie.svg" alt="cookie" height="21px" class="mr-2">
     This website uses cookies. By continuing to use this website you consent to their use.<button class="cookieAccept">I Understand</button></div>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-JCXtsC1T-lRJWwHkD-LNFqMVX1GdhL4&callback=initMap" async defer></script>
 
   <!-- Contact Us Modal-->
 
