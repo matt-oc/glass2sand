@@ -85,7 +85,6 @@ $(document).ready(function() {
 
 });
 
-// handle the form submission event from formspree.io
 // Ajax for form
 $(document).ready(function () {
   var options = {
@@ -174,6 +173,6 @@ function copyEmail() {
 }
 
 function recaptcha() {
-let submitBtn = document.getElementById("contact-submit")
-submitBtn.removeAttribute('disabled')
+let submitBtn = document.getElementById("contact-submit");
+submitBtn.removeAttribute('disabled');
 }

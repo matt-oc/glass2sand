@@ -61,22 +61,11 @@ a:hover {
 }
 
 i {
-  vertical-align: middle;
+  vertical-align: text-top;
 }
 
 .red {
   color: #ED1B25;
-}
-
-.loader {
-  background-color: #ffffff;
-  display: flex;
-  z-index: 1050;
-  position: absolute;
-}
-
-.loader img {
-  height: 20%;
 }
 
 .white-content {
@@ -85,15 +74,6 @@ i {
 
 .url {
   color: #1D91FC;
-}
-
-.recycle-logo {
-  margin-left: -10px;
-  border-radius: 30px;
-}
-
-.unused-recycle-logo:hover {
-  animation: rotation 8s infinite linear;
 }
 
 .z-50 {
@@ -126,8 +106,8 @@ i {
 
 .contact-header {
   z-index: 1001;
-background-color: #292928;
- padding: 15px;
+  background-color: #292928;
+  padding: 15px;
   height: 50px;
 }
 
@@ -139,10 +119,31 @@ background-color: #292928;
   font-size: .95rem;
 }
 
+.contact-header-el a {
+  color: #bfbfbf;
+}
+
+.contact-header-el i {
+  margin-right: 10px;
+  font-size: 1.0rem;
+  vertical-align: inherit;
+}
+
+.contact-header-note {
+  position: absolute;
+  top: 12.5px;
+  left: 15px
+}
+
+.contact-header-note i {
+  font-size: 1.5rem;
+  margin-left: 5px;
+}
+
 .jumbotron {
   width: 100%;
-  height:auto;
-overflow:visible;
+  height: auto;
+  overflow: visible;
   min-height: 700px;
   background-image: url("./images/jumbotron.jpeg");
   background-size: cover;
@@ -169,6 +170,7 @@ overflow:visible;
 }
 
 .card {
+  position: relative;
   background-color: transparent;
   background-color: rgba(255, 255, 255, .10);
   backdrop-filter: blur(5px);
@@ -187,6 +189,38 @@ overflow:visible;
   background-color: rgba(255, 255, 255, .13);
   border: 1px solid #ED1B25;
   color: #ffffff;
+}
+
+.card:hover::after {
+  display: block;
+}
+
+.card:after {
+  content: "\f0ab";
+    font-family: "FontAwesome";
+    left: 0;
+    right: 0;
+    bottom: -50px;
+    position: absolute;
+    font-size: 2rem;
+    text-align: center;
+    display: none;
+    animation: MoveUp .3s linear;
+}
+
+@keyframes MoveUp {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .card-image {
@@ -218,6 +252,17 @@ overflow:visible;
   display: flex;
 }
 
+.loader {
+  background-color: #ffffff;
+  display: flex;
+  z-index: 1050;
+  position: absolute;
+}
+
+.loader img {
+  height: 20%;
+}
+
 #crusher, #digester, #compactor {
   position: absolute;
   transform: translateY(-14vh);
@@ -233,7 +278,8 @@ overflow:visible;
   background-color: transparent;
   padding: 17px 40px 17px 40px;
   border: 1px solid #ffffff;
-  transition: border .5s, background-color .5s}
+  transition: border .5s, background-color .5s
+}
 
 .contact-btn:hover, .btn:hover {
   color: #ffffff;
@@ -248,8 +294,9 @@ overflow:visible;
   padding: 10px 20px 10px 20px;
   border: 1px solid #ffffff;
   transition: border .5s, background-color .5s;
-margin-left: 15px;
-margin-right: 15px;}
+  margin-left: 15px;
+  margin-right: 15px;
+}
 
 .btn:hover {
   color: #ffffff;
@@ -290,10 +337,10 @@ body.modal-open {
   height: auto;
   color: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
- padding: 20px;
- display: flex;
- justify-content: center;
- background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background-color: #ffffff;
 }
 
 .product-section img {
@@ -345,25 +392,25 @@ body.modal-open {
 }
 
 #logic {
-  height: 10%!important;
+  height: 10% !important;
 }
 
 .logo-left {
   position: absolute;
   top: 20px;
-  height: 7%!important;
+  height: 7% !important;
 }
 
 .logo-right {
   position: absolute;
   top: 20px;
-  height: 10%!important;
+  height: 10% !important;
 }
 
 .product-btns {
   position: relative;
-    bottom: -40px;
-    width: 100%;
+  bottom: -40px;
+  width: 100%;
 }
 
 .product-copy {
@@ -395,6 +442,7 @@ body.modal-open {
   font-size: 14px;
   max-width: 100vw;
 }
+
 #cookieConsent button.cookieAccept {
   background: #ED1B25;
   color: #ffffff;
@@ -409,7 +457,6 @@ body.modal-open {
 }
 
 /* Tooltip */
-
 [tooltip] {
   margin: 10px 0px;
   position: relative;
@@ -480,7 +527,6 @@ body.modal-open {
   opacity: 1;
 }
 
-
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 100%;
@@ -549,13 +595,14 @@ body.modal-open {
   border: 1px solid #ED1B25;
   background-color: #ED1B25;
   padding: 17px 40px 17px 40px;
-  transition: border .5s, background-color .5s}
+  transition: border .5s, background-color .5s
+}
 
-  .contact-btn-submit:hover {
+.contact-btn-submit:hover {
   color: #ffffff;
   border: 1px solid #b32400;
   background-color: #b32400;
-  }
+}
 
 .contact fieldset {
   margin: 10px;
@@ -592,10 +639,7 @@ body.modal-open {
 .footer i {
   font-size: 1.2rem;
   margin-left: 1px;
-}
-
-.footer-main {
-
+  vertical-align: text-bottom;
 }
 
 .footer hr {
@@ -644,73 +688,42 @@ body.modal-open {
   pointer-events: none;
   opacity: .5;
 }
-/* Keyframes for animation */
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-@keyframes float {
-	0% {
-		transform:rotate(0deg) translatey(0px);
-	}
-	50% {
-		transform: rotate(5deg) translatey(-10px);
-	}
-	100% {
-		transform: rotate(0deg) translatey(0px);
-	}
-}
-
 
 /* Media queries */
 @media(max-width:1650px) {
-
   .product-section img {
     height: 20rem;
   }
-
 }
 
 @media(max-width:1330px) {
-
   .product-section img {
     height: 18rem;
   }
-
 }
 
 @media(max-width:1220px) {
-
   .product-section img {
     height: 16rem;
   }
 
   .card-image {
     height: 210px;
-}
+  }
 
-.card {
-  margin: 0;
-}
-
+  .card {
+    margin: 0;
+  }
 }
 
 @media(max-width:1140px) {
-
   .card-title {
     font-size: 1.2rem;
   }
 
   #logic {
-    height: 8%!important;
+    height: 8% !important;
   }
-
 }
 
 @media(max-width:1060px) {
@@ -723,6 +736,10 @@ body.modal-open {
   .product-section img {
     height: 13rem;
   }
+
+  .contact-header-note {
+    display: none;
+  }
 }
 
 @media(max-width:884px) {
@@ -733,50 +750,75 @@ body.modal-open {
   .product-section img {
     height: 12rem;
   }
-
-  .contact-header-el {
-    padding: 0;
-}
-
-@media(max-width:782px) {
-  .card-title {
-    font-size: .9rem;
   }
 
-}
-
-@media(max-width:768px) {
-  .card-title {
-    font-size: 1.2rem;
+  @media(max-width:782px) {
+    .card-title {
+      font-size: .9rem;
+    }
   }
 
-  .logo-left {
-    height: 5%!important;
+  @media(max-width:768px) {
+    .card-title {
+      font-size: 1.2rem;
+    }
+
+    .logo-left {
+      height: 5% !important;
+    }
+
+    #logic {
+      height: 5% !important;
+    }
+
+    .modal-dialog {
+      max-width: 90%;
+    }
+
+    .card:hover::after {
+      display: none;
+    }
   }
 
-  #logic {
-    height: 5%!important;
+  @media(min-width:768px) {
+    .modal-dialog {
+      max-width: 600px;
+    }
   }
 
-}
+  @media(max-width:692px) {
 
-@media(min-width:768px) {
-  .modal-dialog {
-    max-width: 600px;
+    .contact-header-el {
+      padding: 0 40px 0 40px;
+    }
+
+    p {
+      width: 85%;
+    }
   }
 
-}
+  @media(max-width:575px) {
 
-@media(max-width:768px) {
-  .modal-dialog {
-    max-width: 90%;
+    .jumbotron {
+    padding: 4rem 2rem;
   }
-}
 
-@media(max-width:647px) {
-  
-}
+  @media(max-width:532px) {
 
-@media(min-width:2249px) {
+    .contact-header-el {
+      padding: 0 10px 0 10px;
+    }
+  }
 
-}
+  @media(max-width:400px) {
+
+    .contact-header-el {
+      font-size: .8rem
+    }
+
+    .contact-header-el i {
+      font-size: 1rem;
+    }
+  }
+
+  @media(min-width:2249px) {}

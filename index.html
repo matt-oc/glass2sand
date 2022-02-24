@@ -49,12 +49,14 @@
   <!-- Contact top bar -->
 
   <div class="container-fluid d-flex contact-header justify-content-center align-items-center">
+
+        <span class="contact-header-note">Get in touch <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+ </span>
+
     <div class="row">
       <div class="col-12 d-flex justify-content-center align-items-center">
-        <div class="contact-header-el">
-          Get in touch with us by email: <a href="javascript:;" id="email" onclick="copyEmail()"><span id="tooltip-em" tooltip="Copy to Clipboard" tooltip-position="bottom" tabindex="-1">info@glass2sand.com</a> or by phone on: <a href="javascript:;"
-            id="phone-no" onclick="copyNumber()"><span id="tooltip-no" tooltip="Copy to Clipboard" tooltip-position="bottom" tabindex="-1">+353 87 8578806</a>
-        </div>
+        <span class="contact-header-el"><i class="fa fa-envelope"></i><a href="javascript:;" id="email-copy" onclick="copyEmail()"><span id="tooltip-em" tooltip="Copy to Clipboard" tooltip-position="bottom" tabindex="-1">info@glass2sand.com</span></a></span>
+        <span class="contact-header-el"><i class="fa fa-phone"></i><a href="javascript:;" id="phone-no" onclick="copyNumber()"><span id="tooltip-no" tooltip="Copy to Clipboard" tooltip-position="bottom" tabindex="-1">+353 87 8578806</span></a></span>
       </div>
     </div>
   </div>
@@ -69,7 +71,7 @@
           <div class="jumbotron-contents">
             <div class="row">
               <div class="col-12 d-flex justify-content-center align-items-center mb-5">
-                <img src="assets/images/main-logo-transparent-separate.png" height="85" alt="glass2sand-logo"><img src="assets/images/recycle-logo.png" height="85" alt="glass2sand-logo" class="recycle-logo">
+                <img src="assets/images/main-logo-transparent.png" height="85" alt="glass2sand-logo">
               </div>
               <div class="col-12 mt-1 mb-5 d-flex justify-content-center">
                 <p>Glass2Sand are an Irish company that specialise in glass crushers, incontinence disposal machines and bio digesters. For more information, check out our products below.</p>
@@ -126,6 +128,7 @@
                 <p>At Glass2Sand we deal in a range of equipment, from glass bottle crushers, to bio-digesters and incontinence waste compactors. More information is available below
                   including video demos and downloadable PDF information. If you require any assistance please get in touch.</p>
               </div>
+            </div>
           </section>
         </div>
         <div class="container-fluid products">
@@ -270,6 +273,7 @@
           </div>
         </div>
       </div>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -337,7 +341,7 @@
 
   <!-- Cookie notice -->
 
-  <div id="cookieConsent"> <img src="assets/images/cookie.svg" alt="cookie" height="21px" class="mr-2">
+  <div id="cookieConsent"> <img src="assets/images/cookie.svg" alt="cookie" height="21" class="mr-2">
     This website uses cookies. By continuing to use this website you consent to their use.<button class="cookieAccept">I Understand</button></div>
 
   <!-- Contact Us Modal-->
@@ -358,15 +362,15 @@
                 <p>Please fill out the form below and we will get back to you as soon as possible.</p>
                 <fieldset>
                   <input type="text" id="name" required placeholder="Name" name="name"><br>
-                  <input type="Email" id="email" name="email" placeholder="Email" required><br>
+                  <input type="email" id="email" name="email" placeholder="Email" required><br>
                   <input type="tel" id="phone" name="phone" placeholder="Phone"><br>
                   <input id="subject" type="text" name="subject" placeholder="Subject" required><br>
                   <label for="message">Message:</label><br>
-                  <textarea rows="4" id="message" type="textarea" name="message" required></textarea><br>
-                  <span class="help-block">
+                  <textarea rows="4" id="message" name="message" required></textarea><br>
+                  <div class="help-block">
                     <p id="characterLeft" class="help-block ">You have reached the limit</p>
                     <div class="g-recaptcha" data-sitekey="6Ld9zZceAAAAAKthdLEFCXbdwBf8wkFVeQ8HPOPS" data-callback="recaptcha"></div>
-                  </span>
+                  </div>
                 </fieldset>
               </form>
             </div>
