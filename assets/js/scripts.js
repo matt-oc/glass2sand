@@ -69,20 +69,12 @@ var form = document.getElementById("contact");
     $('[data-toggle="popover"]').popover()
   })
 
-  // loader removal
 $(document).ready(function() {
   $(this).scrollTop(0);
-  setTimeout(() => {
-    $(".loader").fadeOut();
-    $(".content").fadeIn();
-    $(".footer").fadeIn();
-    $("h4").fadeIn(2000);
     $('#cookieConsent').cookieConsent({
           message: 'This website uses cookies. By using this website you consent to our use of these cookies.',
           consentTime: 365
         });
-  }, 1000);
-
 });
 
 // Ajax for form

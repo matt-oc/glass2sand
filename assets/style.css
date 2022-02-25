@@ -105,10 +105,6 @@ i {
   padding: 100px 0 100px 0;
 }
 
-.content, .footer {
-  display: none;
-}
-
 .contact-header {
   z-index: 1001;
   background-image: linear-gradient(to left, rgba(41, 30, 40, 0), rgba(41, 41, 40, .3), rgba(41, 41, 40, .6), rgba(41, 41, 40, 1));
