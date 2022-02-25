@@ -87,6 +87,10 @@ i {
   width: 100%;
 }
 
+.color-white {
+  color: #777777!important;
+}
+
 /* General Structure */
 .container-fluid {
   padding: 0;
@@ -818,11 +822,21 @@ body.modal-open {
     padding: 4rem 2rem;
   }
 
+  .modal-dialog {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media(max-width:532px) {
 
     .contact-header-el {
       padding: 0 10px 0 10px;
     }
+  }
+
+  @media(max-width:460px) {
+  .contact {
+    min-width: 300px;
   }
 
   @media(max-width:400px) {
