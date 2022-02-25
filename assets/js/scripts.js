@@ -64,14 +64,14 @@ function showResponse(responseText, statusText, xhr, $form) {
     setTimeout(function() {
       $("#success").hide();
       $("#form-confirmation").fadeOut('slow');
-    }, 4000);
+    }, 3000);
   } else {
     $("#loader").hide();
     $("#failure").show();
     setTimeout(function() {
       $("#failure").hide();
       $("#form-confirmation").fadeOut('slow');
-    }, 4000);
+    }, 3000);
   }
 };
 
