@@ -88,7 +88,7 @@ i {
 }
 
 .color-white {
-  color: #777777!important;
+  color: #777777 !important;
 }
 
 /* General Structure */
@@ -111,7 +111,7 @@ i {
 
 .contact-header {
   z-index: 1001;
-  background-color: #292928;
+  background-image: linear-gradient(to left, rgba(41, 30, 40, 0), rgba(41, 41, 40, .3), rgba(41, 41, 40, .6), rgba(41, 41, 40, 1));
   padding: 15px;
   height: 50px;
 }
@@ -202,15 +202,15 @@ i {
 
 .card:after {
   content: "\f0ab";
-    font-family: "FontAwesome";
-    left: 0;
-    right: 0;
-    bottom: -50px;
-    position: absolute;
-    font-size: 2rem;
-    text-align: center;
-    display: none;
-    animation: MoveUp .3s linear;
+  font-family: "FontAwesome";
+  left: 0;
+  right: 0;
+  bottom: -50px;
+  position: absolute;
+  font-size: 2rem;
+  text-align: center;
+  display: none;
+  animation: MoveUp .3s linear;
 }
 
 @keyframes MoveUp {
@@ -218,10 +218,12 @@ i {
     transform: translateY(-20px);
     opacity: 0;
   }
+
   50% {
     transform: translateY(-10px);
     opacity: 0.5;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -735,9 +737,9 @@ body.modal-open {
 }
 
 @media(max-width:1200px) {
- .map {
-   width: 80%;
- }
+  .map {
+    width: 80%;
+  }
 }
 
 @media(max-width:1060px) {
@@ -747,15 +749,14 @@ body.modal-open {
 }
 
 @media(max-width:992px) {
-
   .logo-left {
-      left: 20px;
-      height: 12% !important;
+    left: 20px;
+    height: 12% !important;
   }
 
   .logo-right {
-      left: 20px;
-      height: 15% !important;
+    left: 20px;
+    height: 15% !important;
   }
 
   #logic {
@@ -764,7 +765,6 @@ body.modal-open {
 }
 
 @media(max-width:980px) {
-
   .contact-header-note {
     display: none;
   }
@@ -774,53 +774,50 @@ body.modal-open {
   .card-title {
     font-size: 1rem;
   }
+}
 
+@media(max-width:782px) {
+  .card-title {
+    font-size: .9rem;
+  }
+}
+
+@media(max-width:768px) {
+  .card-title {
+    font-size: 1.2rem;
   }
 
-  @media(max-width:782px) {
-    .card-title {
-      font-size: .9rem;
-    }
+  .modal-dialog {
+    max-width: 90%;
   }
 
-  @media(max-width:768px) {
-    .card-title {
-      font-size: 1.2rem;
-    }
-
-    .modal-dialog {
-      max-width: 90%;
-    }
-
-    .card:hover::after {
-      display: none;
-    }
-
-    #main-logo {
-      height: 73px;
-    }
+  .card:hover::after {
+    display: none;
   }
 
-  @media(min-width:768px) {
-    .modal-dialog {
-      max-width: 600px;
-    }
+  #main-logo {
+    height: 73px;
+  }
+}
+
+@media(min-width:768px) {
+  .modal-dialog {
+    max-width: 600px;
+  }
+}
+
+@media(max-width:692px) {
+  .contact-header-el {
+    padding: 0 40px 0 40px;
   }
 
-  @media(max-width:692px) {
-
-    .contact-header-el {
-      padding: 0 40px 0 40px;
-    }
-
-    p {
-      width: 85%;
-    }
+  p {
+    width: 85%;
   }
+}
 
-  @media(max-width:575px) {
-
-    .jumbotron {
+@media(max-width:575px) {
+  .jumbotron {
     padding: 4rem 2rem;
   }
 
@@ -830,28 +827,26 @@ body.modal-open {
   }
 
   @media(max-width:532px) {
-
     .contact-header-el {
       padding: 0 10px 0 10px;
     }
   }
 
   @media(max-width:460px) {
-  .contact {
-    min-width: 300px;
-  }
-
-  @media(max-width:400px) {
-
-    .contact-header-el {
-      font-size: .8rem
+    .contact {
+      min-width: 300px;
     }
 
-    .contact-header-el i {
-      font-size: 1rem;
-    }
+    @media(max-width:400px) {
+      .contact-header-el {
+        font-size: .8rem
+      }
 
-    .logo-right {
+      .contact-header-el i {
+        font-size: 1rem;
+      }
+
+      .logo-right {
         height: 10% !important;
+      }
     }
-  }
