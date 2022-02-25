@@ -65,6 +65,9 @@ function showResponse(responseText, statusText, xhr, $form) {
       $("#success").hide();
       $("#form-confirmation").fadeOut('slow');
     }, 3000);
+    setTimeout(function() {
+      $('#contactUs').modal('toggle');
+    }, 500);
   } else {
     $("#loader").hide();
     $("#failure").show();
@@ -72,6 +75,9 @@ function showResponse(responseText, statusText, xhr, $form) {
       $("#failure").hide();
       $("#form-confirmation").fadeOut('slow');
     }, 3000);
+    setTimeout(function() {
+      $('#contactUs').modal('toggle');
+    }, 500);
   }
 };
 

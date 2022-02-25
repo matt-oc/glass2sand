@@ -185,7 +185,7 @@ i {
 }
 
 #form-confirmation img {
-height: 15%;
+  height: 15%;
 }
 
 #success, #failure {
@@ -811,11 +811,11 @@ body.modal-open {
   }
 
   .g-recaptcha {
-    transform:scale(0.77);
-    -webkit-transform:scale(0.77);
+    transform: scale(0.77);
+    -webkit-transform: scale(0.77);
     transform-origin: center;
     -webkit-transform-origin: center;
-}
+  }
 
   .card:hover::after {
     display: none;
@@ -852,27 +852,33 @@ body.modal-open {
     margin-right: auto;
   }
 
-  @media(max-width:532px) {
-    .contact-header-el {
-      padding: 0 10px 0 10px;
-    }
+  .menu-list ul {
+    padding: 0;
+  }
+}
+
+@media(max-width:532px) {
+  .contact-header-el {
+    padding: 0 10px 0 10px;
+  }
+}
+
+@media(max-width:460px) {
+  .contact {
+    min-width: 310px;
+  }
+}
+
+@media(max-width:400px) {
+  .contact-header-el {
+    font-size: .8rem
   }
 
-  @media(max-width:460px) {
-    .contact {
-      min-width: 310px;
-    }
+  .contact-header-el i {
+    font-size: 1rem;
+  }
 
-    @media(max-width:400px) {
-      .contact-header-el {
-        font-size: .8rem
-      }
-
-      .contact-header-el i {
-        font-size: 1rem;
-      }
-
-      .logo-right {
-        height: 10% !important;
-      }
-    }
+  .logo-right {
+    height: 10% !important;
+  }
+}
