@@ -146,7 +146,7 @@ i {
   height: auto;
   overflow: visible;
   min-height: 700px;
-  background-image: url("./images/jumbotron.jpeg");
+  background-image: url("./images/jumbotron.jpg");
   background-size: cover;
   position: relative;
   color: #bfbfbf;
@@ -168,6 +168,29 @@ i {
   z-index: 1000;
   margin-top: 50px;
   position: relative;
+}
+
+#form-confirmation {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.90);
+  z-index: 5000;
+  color: #ffffff;
+  display: none;
+}
+
+#form-confirmation img {
+height: 15%;
+}
+
+#success, #failure {
+  display: none;
+  text-align: center;
 }
 
 .card {
@@ -268,7 +291,7 @@ i {
 
 #crusher, #digester, #compactor {
   position: absolute;
-  transform: translateY(-14vh);
+  transform: translateY(-5vh);
 }
 
 .landing-screen {
@@ -784,8 +807,15 @@ body.modal-open {
   }
 
   .modal-dialog {
-    max-width: 90%;
+    max-width: 95%;
   }
+
+  .g-recaptcha {
+    transform:scale(0.77);
+    -webkit-transform:scale(0.77);
+    transform-origin: center;
+    -webkit-transform-origin: center;
+}
 
   .card:hover::after {
     display: none;
@@ -830,7 +860,7 @@ body.modal-open {
 
   @media(max-width:460px) {
     .contact {
-      min-width: 300px;
+      min-width: 310px;
     }
 
     @media(max-width:400px) {
