@@ -322,6 +322,7 @@ i {
   transition: border .5s, background-color .5s;
   margin-left: 15px;
   margin-right: 15px;
+  margin-top: 0;
 }
 
 .btn:hover {
@@ -725,6 +726,18 @@ body.modal-open {
   }
 }
 
+@media(max-width:1559px) and (min-width: 1200px) {
+  .long-btn {
+    margin-top: 20px !important;
+  }
+}
+
+@media(max-width:1105px) and (min-width: 992px) {
+  .long-btn {
+    margin-top: 20px !important;
+  }
+}
+
 @media(max-width:1330px) {
   .product-section img {
     height: 18rem;
@@ -840,6 +853,10 @@ body.modal-open {
   p {
     width: 85%;
   }
+
+  .long-btn {
+    margin-top: 20px !important;
+  }
 }
 
 @media(max-width:575px) {
@@ -866,6 +883,12 @@ body.modal-open {
 @media(max-width:460px) {
   .contact {
     min-width: 310px;
+  }
+}
+
+@media(max-width:415px) {
+  .med-bt {
+    margin-top: 20px !important;
   }
 }
 
