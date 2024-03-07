@@ -193,6 +193,10 @@ i {
   text-align: center;
 }
 
+.crusher {
+  margin-left: -10px;
+}
+
 .card {
   position: relative;
   background-color: transparent;
